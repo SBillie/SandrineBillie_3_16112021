@@ -25,7 +25,7 @@ header h1 {
     position: relative;
 }
 
-/* Location */
+/* Location header */
 
 .location {
     display:flex;
@@ -44,3 +44,41 @@ header h1 {
     font-weight:700;
     
 }
+
+/* Texte d'accroche header */
+
+.accroche_bloc{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 10px 0 50px;
+}
+
+.accroche_bloc h2{
+    font-size: 23px;
+}
+
+.accroche_bloc p{
+    font-weight: 300;
+    margin-bottom: 36px;
+}
+.accroche_bloc a{
+    font-weight: 400;
+    font-size: large;
+    border: none;
+    border-radius: 65px;
+    color: #fff;
+    background-color: grey;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    padding: 16px 24px;
+    box-shadow:2px 1px 16px rgba(0,0,0,0.25);
+    transition: .25s; 
+}
+
+.accroche_bloc a:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+
+
