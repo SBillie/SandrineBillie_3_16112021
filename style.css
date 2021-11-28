@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+*,
+::before
+::after {
+    box-sizing: border-box;
+    
+}
+
+body{ 
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+
+header h1 {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 0px 2px 4px #636363cc;
+    margin:0;
+    padding: 16px;
+    position: relative;
+}
+
+/* Location header */
+
+.location {
+    display:flex;
+    justify-content:center;
+    background-color: lightgrey;
+    font-size: 19px;
+    padding:16px;
+    position: relative;
+}
+
+.location_icon{
+    margin-right:16px
+}
+
+.location_text{
+    font-weight:700;
+    
+}
+
+/* Texte d'accroche header */
+
+.accroche_bloc{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 10px 0 50px;
+}
+
+.accroche_bloc h2{
+    font-size: 23px;
+}
+
+.accroche_bloc p{
+    font-weight: 300;
+    margin-bottom: 36px;
+}
+.accroche_bloc a{
+    font-weight: 400;
+    font-size: large;
+    border: none;
+    border-radius: 65px;
+    color: #fff;
+    background-color: grey;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    padding: 16px 24px;
+    box-shadow:2px 1px 16px rgba(0,0,0,0.25);
+    transition: .25s; 
+}
+
+.accroche_bloc a:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+
+
