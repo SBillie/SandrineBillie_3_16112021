@@ -1,21 +1,22 @@
 {
-  "name": "palme",
+  "name": "p3-mission",
   "version": "1.0.0",
-  "description": "OPC P3",
+  "description": "OPC project 3 ohmyfood",
   "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.43.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "\u0016\u0016\u0016"
+    "url": "git+https://github.com/SBillie/SandrineBillie_3_16112021.git"
   },
-  "keywords": [
-    "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Chttps://github.com/SBillie/SandrineBillie_3_16112021"
-  ],
-  "author": "SBillie",
+  "author": "SB",
   "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.43.5"
-  }
+  "bugs": {
+    "url": "https://github.com/SBillie/SandrineBillie_3_16112021/issues"
+  },
+  "homepage": "https://github.com/SBillie/SandrineBillie_3_16112021#readme"
 }
