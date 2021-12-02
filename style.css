@@ -14,6 +14,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 /* Navbar */
 
 header h1 {
@@ -72,13 +74,210 @@ header h1 {
     cursor: pointer;
     padding: 16px 24px;
     box-shadow:2px 1px 16px rgba(0,0,0,0.25);
-    transition: .25s; 
 }
 
 .accroche_bloc a:hover{
-    transform: scale(1.02);
-    opacity: 0.9;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+/* Fonctionnement */
+.functioning{
+    padding: 36px 16px;
 }
 
+.functioning_bloc{
+   margin: auto;
+   position: relative;
+}
+
+.functioning_bloc ol{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+@media screen and (max-width: 800px){
+    .functioning_bloc ol{
+        display: flex;
+       flex-direction: column;
+    }
+}
+    
 
 
+.functioning_bloc li{
+    padding: 1.5rem;
+    margin: 1rem 0 1rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+}
+
+.functioning_bloc li::before{
+    counter-increment: compteListe 1;
+    content:counter(compteListe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9356dc;
+    color: #fafafa;
+    height:24px ;
+    width: 24px;
+    position: absolute;
+    left: -12px;
+    border-radius: 12px;
+}
+
+.functioning_bloc i{
+    margin-right: 16px;
+    color:#7e7e7e;
+}
+
+.functioning_bloc span{
+    font-weight: bold;
+}
+
+.functioning_bloc li:hover{
+    background: #f2eafb;
+}
+
+.functioning_bloc .fas:hover{
+    color:#9356dc;  
+}
+
+@media screen and (min-width:800px){
+.functioning_bloc li:first-child {
+    display: flex; 
+    flex-direction: row;   
+    margin-left: 0.75rem;
+    }
+
+.functioning_bloc li{
+    flex: 1;
+    margin: 0 0 0 2rem;
+}
+}
+
+/* Partie Restaurant */
+
+#Restaurants{
+    background-color:#f6f6f6;
+    padding: 36px 16px;
+
+}
+.Restaurants_bloc{
+    margin: auto;
+    position: relative
+}
+
+.Restaurants_bloc h3{
+    font-size: 25px;
+}
+
+.restau_cards{
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.restau_cards article{
+    position: relative;
+    background-color:#ffff;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    
+}
+
+.restau_cards img{
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+}
+
+.restau_new {
+    border-radius: 2px;
+    background-color: lightgreen;
+    color: grey;
+    padding: 8px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    
+}
+
+.restau_name{
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+}
+
+.restau_title{
+    color:#000000;
+    border: 3px solid green;
+    flex: 1;
+}
+
+.restau_title h4{
+    margin: 0 0 4px;
+    font-size: 19px;
+}
+
+.restau_title p{
+    margin: 0;
+}
+
+.restau_title i
+
+/* Footer */
+
+.footer_restau{
+    background-color: #353535;;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.footer_container span{
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    font-size: 20px;
+    padding: 16px;
+}
+
+.footer_list{
+    padding-left: 12px;
+}
+
+.footer_list li{
+    list-style-type: none;
+    margin:8px 0;
+          
+}
+
+.footer_link_icon{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer_link_icon i{
+    width: 19px;
+    margin-right: 16px;
+}
+
+.footer_link{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
