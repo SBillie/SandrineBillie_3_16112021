@@ -82,6 +82,8 @@ header h1 {
 .accroche_bloc a:hover{
     opacity: 0.7;
 }
+
+
 /* Fonctionnement */
 .functioning{
     padding: 36px 16px;
@@ -306,6 +308,7 @@ header h1 {
     font-size: 20px;
 }
 
+
 /* Page menu 1 lapalettedugout */
 
 .restau_1_container{
@@ -332,7 +335,6 @@ header h1 {
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    object-position: bottom;
 }
 
 .restau_1_header{
@@ -370,23 +372,152 @@ header h1 {
     opacity: 1;
 }
 
-.h3restau{
-    display: flex;
-}
-.entrees h3{
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 0.5rem;
-    font-weight: 400;
-}
-.entrees h3::after{
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    background-color: #99e2d0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+/* ENTREES */
+*.restau_submenus{
+    background-color: #f6f6f6;
 }
 
-/* button commander */
+.menus_container h2{
+    margin: 0px 14px 4px;
+    font-weight: normal;
+    font-size: smaller;
+    text-transform: uppercase;
+}
+
+.menus_container_underline{
+    width: 3rem;
+    background: #99e2d0;
+    height: 3px;
+    margin: 0 0 12px 15px;
+}
+
+.menus_container_all_text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 20px 0px 8px 0px;
+  }
+  .menus_container_all_line {
+    background-color: #99E2D0;
+    margin: 0;
+    height: 3px;
+    width: 40px;
+  }
+  .menus_container_bloc {
+    margin: 0 15px 15px;
+    background: white;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .menus_container_bloc:hover .menus_container_titleprice {
+    width: calc(100% - 65px);
+    transition: width 0.5s ease-in-out;
+  }
+  .menus_container_bloc:hover .menus_container_check {
+    transform: translateX(0px);
+    transition: 0.5s ease-in-out;
+  }
+  .menus_container_bloc:hover .fas.fa-check-circle {
+    transform: rotate(360deg);
+    transition: rotate 0.5s ease-in-out;
+  }
+  .menus_container_food {
+    margin: 15px 0px 5px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .menus_container_titleprice {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    transform-origin: left 50%;
+    transition-duration: 0.5s;
+  }
+  .menus_container_title {
+    margin: 0px 0px 0px 15px;
+    font-weight: normal;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menus_container_price {
+    margin: 0;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 50px;
+  }
+  .menus_container_check {
+    position: absolute;
+    background-color: #99E2D0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    transform-origin: right 50%;
+    border-radius: 0px 20px 20px 0px;
+    transform: translateX(65px);
+    overflow: hidden;
+    transition-duration: 0.5s;
+  }
+  .menus_container_all .fas.fa-check-circle {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  
+  .menu_container h2 > :nth-of-type(2) {
+    animation: SlideDown 0.4s ease-in-out;
+
+}
+
+.button_command{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0
+}
+
+.button_command a{
+    font-weight: 400;
+    font-size: large;
+    border: none;
+    border-radius: 65px;
+    color: #fff;
+    background-color: grey;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    padding: 16px 24px;
+    box-shadow:2px 1px 16px rgba(0,0,0,0.25);
+    transform: scale(1.2);
+    transition:  250ms;
+}
+    
+.button_command a:hover{
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 900px){
+.restau_submenus{
+    margin: 0 12rem 0 12rem;
+}
+
+.menus_container_all{
+    display: flex;
+    flex-direction: row;
+    }
+}
+
+
+
+ 
