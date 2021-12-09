@@ -182,13 +182,13 @@ header h1 {
 }
 
 .restau_cards{
-    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-decoration: none;
 }
 
-.restau_cards article{
+.restau_cards_container {
     position: relative;
     background-color:#ffff;
     border-radius: 20px;
@@ -309,7 +309,7 @@ header h1 {
 }
 
 
-/* Page menu 1 lapalettedugout */
+/* Page menu */
 
 .restau_1_container{
     background-color:#f6f6f6;
@@ -372,11 +372,12 @@ header h1 {
     opacity: 1;
 }
 
-/* ENTREES */
+/* ENTREES PLATS DESSERTS*/
 *.restau_submenus{
     background-color: #f6f6f6;
 }
 
+/* nom du restaurant et ligne verte */
 .menus_container h2{
     margin: 0px 14px 4px;
     font-weight: normal;
@@ -390,19 +391,7 @@ header h1 {
     height: 3px;
     margin: 0 0 12px 15px;
 }
-
-.menus_container_all_text {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 20px 0px 8px 0px;
-  }
-  .menus_container_all_line {
-    background-color: #99E2D0;
-    margin: 0;
-    height: 3px;
-    width: 40px;
-  }
+/* fond blanc du menu */
   .menus_container_bloc {
     margin: 0 15px 15px;
     background: white;
@@ -411,26 +400,17 @@ header h1 {
     box-shadow: 2px 2px 7px #d3d3d3;
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 92%;
   }
   
-  .menus_container_bloc:hover .menus_container_titleprice {
-    width: calc(100% - 65px);
-    transition: width 0.5s ease-in-out;
-  }
-  .menus_container_bloc:hover .menus_container_check {
-    transform: translateX(0px);
-    transition: 0.5s ease-in-out;
-  }
-  .menus_container_bloc:hover .fas.fa-check-circle {
-    transform: rotate(360deg);
-    transition: rotate 0.5s ease-in-out;
-  }
+    /* titre du plat */
   .menus_container_food {
     margin: 15px 0px 5px 15px;
     font-weight: bold;
     font-size: 1rem;
   }
+
+  /* accompagnement et prix */
   .menus_container_titleprice {
     display: flex;
     justify-content: space-between;
@@ -453,6 +433,8 @@ header h1 {
     padding-left: 10px;
     width: 50px;
   }
+
+    /* animation vert de validation */
   .menus_container_check {
     position: absolute;
     background-color: #99E2D0;
@@ -466,6 +448,8 @@ header h1 {
     overflow: hidden;
     transition-duration: 0.5s;
   }
+
+  
   .menus_container_all .fas.fa-check-circle {
     position: absolute;
     left: 20px;
@@ -478,8 +462,9 @@ header h1 {
   
   .menu_container h2 > :nth-of-type(2) {
     animation: SlideDown 0.4s ease-in-out;
-
 }
+
+/* button command */
 
 .button_command{
     display: flex;
