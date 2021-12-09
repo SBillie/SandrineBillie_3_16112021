@@ -177,7 +177,7 @@ header h1 {
     position: relative
 }
 
-.Restaurants_bloc h3{
+.Restaurants_bloc h4{
     font-size: 20px;
 }
 
@@ -228,7 +228,7 @@ header h1 {
    
 }
 
-.restau_title h3{
+.restau_title h5{
     margin: 0 0 6px;
     font-size: 19px;
 }
@@ -437,16 +437,16 @@ header h1 {
     /* animation vert de validation */
   .menus_container_check {
     position: absolute;
-    background-color: #99E2D0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 65px;
-    transform-origin: right 50%;
-    border-radius: 0px 20px 20px 0px;
-    transform: translateX(65px);
-    overflow: hidden;
-    transition-duration: 0.5s;
+  background-color: #99E2D0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  transform-origin: right 50%;
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(65px);
+  overflow: hidden;
+  transition-duration: 0.5s;
   }
 
   
@@ -463,6 +463,7 @@ header h1 {
   .menu_container h2 > :nth-of-type(2) {
     animation: SlideDown 0.4s ease-in-out;
 }
+
 
 /* button command */
 
