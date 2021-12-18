@@ -17,74 +17,100 @@ body{
 
 /* loader */
 
-.loader{
-    position: fixed;
+.spinner {
     height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
     background-color: hsla(0,0%,100%,.9);
-    animation: loader 200ms 3s;
-    animation-fill-mode: both;
-    z-index: 10000;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    
+            animation: spinner 2s linear;
+    visibility: hidden;
+  }
+  
+  .spinner__border {
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader_container{
-    display: block;
-    animation:spin 1s linear infinite;
-    border-radius: 50%;
-    border-top:7px solid;
-    border-top-color: #9356dc;
-    width: 60px;
-    height: 60px;
-}
-
-.loader_container::before, .loader_container::after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 7px solid transparent;
-}
-
-.loader_container::before{
-    top: 10px;
-    left:10px;
-    right:10px;
-    bottom: 10px;
-    border-top-color: #ff79da;;
-    animation: spin 0.25s ;
+   
+            justify-content: center;
     
-}
-
-.loader_container::after{
-    top: 25px;
-    left:25px;
-    right:25px;
-    bottom: 25px;
-    border-top-color:#99e2d0;
-    animation: spin 0.5s ;
+            align-items: center;
+    border: 10px solid transparent;
+    border-top: 10px solid #9356DC;
+    border-bottom: 10px solid #FF79DA;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     
+            animation: spinner-border 2s linear;
+    z-index: 10000;
+    visibility: hidden;
+  }
+  
+  .spinner__center {
+    width: 25px;
+    height: 25px;
+    border-radius: 70%;
+    background-color: #99E2D0;
+  }
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-@keyframes loader{
-    0%{transform: scale(1);
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-    100%{transform:scale (0)
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    
 
-    }
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
-
-@keyframes spin{
-    0% {transform:rotate (0deg)
-
-    }
-
-    100%{transform: rotate(360deg);}
-}
+  
+    
 
 /* Navbar */
 
@@ -212,13 +238,18 @@ header h1 {
     font-weight: bold;
 }
 
-.functioning_bloc li:hover{
+.functioning_bloc li:hover {
     background: #f2eafb;
+    transition: 0.5s linear;
 }
 
-.functioning_bloc .fas:hover{
-    color:#9356dc;  
+
+.functioning_bloc:hover .fas {
+    color:#9356dc; 
+    transition: 0.5s linear; 
 }
+
+
 
 @media screen and (min-width:800px){
 .functioning_bloc li:first-child {
@@ -331,6 +362,16 @@ header h1 {
     opacity: 1;
 }
 
+@media screen and (min-width:1200px) {
+    .restau_cards{
+       
+        grid-template-columns: repeat(2,1fr);
+        display: grid;
+   
+
+    }
+   
+}
 
 /* Footer */
 
@@ -461,7 +502,7 @@ header h1 {
     margin: 0 0 12px 15px;
 }
 /* fond blanc du menu */
-  .menus_container_bloc {
+  .menus_container_bloc  {
     margin: 0 15px 15px;
     background: white;
     height: 70px;
@@ -470,8 +511,12 @@ header h1 {
     position: relative;
     overflow: hidden;
     width: 92%;
+    cursor: pointer;
+
+    
   }
-  
+
+   
     /* titre du plat */
   .menus_container_food {
     margin: 15px 0px 5px 15px;
@@ -504,39 +549,45 @@ header h1 {
   }
 
     /* animation vert de validation */
-  .menus_container_check {
-position: absolute;
-  background-color: #99E2D0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 65px;
-  transform-origin: right 50%;
-  border-radius: 0px 20px 20px 0px;
-  transform: translateX(65px);
-  overflow: hidden;
-  transition-duration: 0.5s;
-  }
+    .menus_container_check {
+        position: absolute;
+          background-color: #99E2D0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 65px;
+         translate:Y(65px);
+          border-radius: 0px 20px 20px 0px;
+          overflow: hidden;
+          transition: all 0.5s ease-in-out;
+          }
+        
+          
+          .menus_container_check .fas {
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            font-size: 1.5rem;
+            color: white;
+            opacity: 1;
+            transform:rotate(180deg);
+            }
 
+            .menus_container_check:hover {
+            transform:rotate(180deg);
+                }
   
-  .menus_container_all .fas.fa-check-circle {
-    position: absolute;
-    left: 20px;
-    top: 25px;
-    font-size: 1.5rem;
-    color: white;
-    opacity: 1;
-    transform: rotate(180deg);
-  }
+          
   
-  .menu_container h2 > :nth-of-type(2) {
-    animation: SlideDown 0.4s ease-in-out;
-}
 
 
+/* animation des sections ENTREES PLATS DESSERTS */
+
+
+     
 /* button command */
 
-.button_command{
+.button_command  {
     display: flex;
     text-decoration: none;
     justify-content: center;
@@ -569,8 +620,8 @@ position: absolute;
 
 .menus_container_all{
     display: flex;
-    flex-direction: row;
-    }
+}
+
 }
 
 
