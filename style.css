@@ -110,9 +110,7 @@ body{
   }
 }
   
-    
-
-/* Navbar */
+   /* Navbar */
 
 header h1 {
     font-family: 'Shrikhand', cursive;
@@ -177,7 +175,6 @@ header h1 {
 .accroche_bloc a:hover{
     opacity: 0.7;
 }
-
 
 /* Fonctionnement */
 .functioning{
@@ -281,11 +278,15 @@ header h1 {
     font-size: 20px;
 }
 
-.restau_cards{
+.card{
+    text-decoration: none;
+}
+
+.restau_card{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-decoration: none;
+  
 }
 
 .restau_cards_container {
@@ -369,8 +370,12 @@ header h1 {
     opacity: 1;
 }
 
-@media screen and (min-width: 1200px){
-
+@media screen and (min-width: 1024px){
+     .restau_cards{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+     }
 }
 /* Footer */
 
