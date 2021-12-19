@@ -501,10 +501,11 @@ header h1 {
     margin: 0 0 12px 15px;
 }
 /* fond blanc du menu */
-  .menus_container_bloc  {
+
+.menus_container_bloc  {
     margin: 0 15px 15px;
     background: white;
-    height: 70px;
+    height: 80px;
     border-radius: 20px;
     box-shadow: 2px 2px 7px #d3d3d3;
     position: relative;
@@ -546,35 +547,42 @@ header h1 {
     font-weight: bold;
     padding-left: 10px;
     width: 50px;
+    display: flex;
+    align-items: flex-end;
   }
 
-    /* animation vert de validation */
-    .menus_container_check {
+   /* animation check */
+
+   .menus_container_check{
+      
     position: absolute;
     background-color: #99E2D0;
     top: 0;
     bottom: 0;
     right: 0;
     width: 65px;
-    translate:Y(65px);
+    margin-right: -6rem;
     border-radius: 0px 20px 20px 0px;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
-}
-        
-          
-    .menus_container_check .fas {
+    transition: 0.5s;
+   }
+
+   .menus_container_check .fas {
     position: absolute;
     left: 20px;
     top: 25px;
     font-size: 1.5rem;
     color: white;
     opacity: 1;
-    transform:rotate(180deg);
 }
 
-    .menus_container_check:hover {
-    transform:rotate(180deg);
+.menus_container_bloc:hover .menus_container_titleprice {
+    width: calc(100% - 65px);
+    transition: width 0.5s ;
+  }
+
+.menus_container_bloc:hover .menus_container_check{
+    margin-right: 0;
 }
     
 /* animation des sections ENTREES PLATS DESSERTS */
